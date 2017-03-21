@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<!--[if IE 7 ]>    <html lang="en" class="ie7 no-js"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8" />
+		<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<title>Contact | AutoLoanSaver.com</title>
+		<link rel="stylesheet" type="text/css" href="assets/css/main.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/superslides.css" />    
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,500italic,400italic,700,700italic' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css" />
+    
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+    <script type="text/javascript" src="assets/js/scripts-head.min.js"></script>
+    <script type="text/javascript" src="assets/js/scripts.min.js"></script>
+    <script type="text/javascript" src="assets/js/slideshow/jquery.superslides.js"></script>
+    <script type="text/javascript" src="assets/js/carousel/owl.carousel.min.js"></script>
+		<link rel="shortcut icon" href="../img/favicon.ico?v=1" />
+		<script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
+	</head>                 
+	          
+  <body class="contact">
+		
+  <div class="top homepage-top">
+    <div class="container">
+      <a href="" id="logo">
+    		<img src="./assets/img/logo.png" alt="AutoLoanSaver.com" />
+    	</a>
+      
+      <div id="main-content" class="make-content">
+        <div id="main" class="contact form-step">
+          <form action="#">
+            <div class="row">
+              <div id="left-column" class="col-sm-6">
+                
+                <div class="form-left">
+                  <h1>Contact Us</h1>                         
+                  
+                  <div>    
+                    <label>Full name</label>
+                    <input type="text" class="input required" name="name" />
+                  </div>
+                      
+                  <div>    
+                    <label>E-mail</label>
+                    <input type="text" class="input required" name="email" />
+                  </div>
+                          
+                  <div>
+                    <label>Subject</label>
+                    <input type="text" class="input required" name="subject" />
+                  </div>
+                      
+                  <div>
+                    <label>Message</label>
+                    <textarea class="required" name="message" rows="5" cols="7" /></textarea>
+                  </div>
+                      
+                  <div>
+                    <label>Type the code below:</label>
+                    <input type="text" class="input required" name="code" />
+                    <img src=" http://www.topcarleasedeals.com/captcha.php" alt="secret code"><br /><br />
+                  </div>
+                     
+                  <input type="submit" class="submit" name="submit" value="Submit" />
+                </div>             
+              </div>
+    
+            </div>
+          </form>
+      </div>
+      
+      <script type="text/javascript">
+          $("form").submit(function() {
+            var theForm = $(this);
+            var formID = theForm.attr("id");
+            error=0;
+            $('.required', theForm).each(function() {
+              if(!$(this).hasClass('checkbox')){
+                if($(this).val()==""){
+                  if ($(this).parent().find('.error').length == 0)
+                    $(this).parent().append('<div class="error">This field is required</div>');
+                  error=1;
+                }
+                else{                                     
+                  if($(this).hasClass('number')){               
+                    number=$(this).val();
+                    if(parseInt(number) == number) $(this).parent().find('.error').remove(); 
+                    else {
+                      error=1;
+                      if ($(this).parent().find('.error').length == 0)
+                        $(this).parent().append('<div class="error">This field must be a number</div>');
+                      else $(this).parent().find('.error').html('This field must be a number');
+                    }
+                  }             
+                  else if($(this).hasClass('email')){               
+                    if(isEmail($(this).val())===true) $(this).parent().find('.error').remove();
+                    else {
+                      error=1;
+                      if ($(this).parent().find('.error').length == 0)
+                        $(this).parent().append('<div class="error">Please enter a valid email address</div>');
+                      else $(this).parent().find('.error').html('Please enter a valid email address');
+                    }
+                  } 
+                  else $(this).parent().find('.error').remove();
+                }
+              }
+              else{
+                checked=0;         
+                $(this).find("input:checked").each(function() {
+                  checked++;
+                });               
+                if(checked==0){
+                  error=1;
+                  if ($(this).find('.error').length == 0)
+                    $(this).append('<div class="error"><br />Make sure at least one dealer is checked<br /><br /></div>');
+                }
+                else $(this).find('.error').remove();
+              }
+            });
+            
+            if(error==0) return true;
+            else return false;
+          });
+          
+          function isEmail(email) {
+            var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            return regex.test(email);
+          }
+        </script>     
+      </div>
+    </div>
+  </div>
+  
+		<div id="footer">
+			<div class="container">
+        <div class="row">
+  				<div class="col-md-6">
+            <ul class="menu-footer reset">
+    					<li><a href="#">Why Us?</a></li>
+    					<li><a href="">Privacy Policy</a></li>
+    					<li><a href="">Terms of Use</a></li>
+    					<li><a href="">Contact</a></li>         
+    				</ul>
+          </div>
+          
+          <div class="col-md-6">   					
+            <div class="social-icons">
+              <a href="#" class="facebook"></a>
+    					<a href="#" class="twitter"></a>
+              <a href="#" class="google-plus"></a>
+            </div>
+            <div class="copyright">
+              Copyright © 2016 CarLeasingSecrets.com, INC. All Rights Reserved.
+            </div>
+  				</div>
+  			</div>
+      </div>                     
+		</div> 		
+	</body>
+</html>
+

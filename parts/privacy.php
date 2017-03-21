@@ -1,0 +1,3 @@
+<div class="privacy text-center">
+  <p>Your privacy is our number one priority so we work hard to abide by the new Telephone Consumer Protection Act regulations. After you submit your information it is encrypted and stored securely in our database. Your data will only be shared with selected partners in order to deliver you best quotes. By submitting your request you are asking us to share your information with our partners; we will work to ensure that you are contacted by these partners, even if your number is on a state, federal or corporate 'do not call' list. You may be contacted via telephone, mobile device (SMS or MMS), email and/or via automated means such as text and pre-recorded messages.</p>
+</div>

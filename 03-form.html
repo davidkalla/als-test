@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<!--[if IE 7 ]>    <html lang="en" class="ie7 no-js"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8" />
+		<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<title>Form 1 | AutoLoanSaver.com</title>
+		<link rel="stylesheet" type="text/css" href="assets/css/main.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/superslides.css" />    
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,500italic,400italic,700,700italic' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css" />
+                   
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+    <script type="text/javascript" src="assets/js/scripts-head.min.js"></script>
+    <script type="text/javascript" src="assets/js/scripts.min.js"></script>
+    <script type="text/javascript" src="assets/js/slideshow/jquery.superslides.js"></script>
+    <script type="text/javascript" src="assets/js/carousel/owl.carousel.min.js"></script>
+		<link rel="shortcut icon" href="../img/favicon.ico?v=1" />
+		<script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
+	</head>              
+	          
+  <body class="page-form">
+		
+      
+  <div class="top homepage-top">
+    <div class="container">
+      <a href="" id="logo">
+    		<img src="./assets/img/logo.png" alt="AutoLoanSaver.com" />
+    	</a>
+      
+            
+      <div id="main-content" class="make-content">
+        <div id="main" class="first-step form-step">   
+          <form action="#" onsubmit="return validateForm(this);">
+            <h1>Get In Touch With Your Lender and Finance a New Or Used Car</h1>
+            <h3 class="text-center">Give us your information</h3> 
+            <div class="row">
+              <div id="left-column" class="col-md-12 col-sm-12">                       
+                <div class="form-left">
+                  <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                      <h2>Select your Vehicle</h2>  
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-6">
+                      <div class="form-radios car-type">
+                        <input name="type" type="radio" value="New" id="form-radio-new" checked /><label class="checked" for="form-radio-new">New car</label>
+                        <input name="type" type="radio" value="New" id="form-radio-used" /><label for="form-radio-used" class="label-right">Used car</label>
+                        <div class="clear"></div>
+                        <script type="text/javascript">
+                          $(".form-radios label").on("click",function(){
+                            if(!$(this).hasClass('checked')){
+                              $(".form-radios label").removeClass('checked');
+                              $(this).addClass('checked');
+                            }
+                          }); 
+                        </script>
+                      </div> 
+                    </div>
+                  </div>
+                  
+                  <div class="row">   
+                    <div class="col-md-6 col-sm-12">
+                      <h2>Contact information</h2>         
+                      <div>
+                        <label>First Name:</label>
+                        <input type="text" class="input required" name="first_name" />
+                       </div>
+                       
+                      <div>
+                        <label>Last Name:</label>
+                        <input type="text" class="input required" name="last_name" />
+                      </div>
+                      
+                      <div>
+                        <label>E-mail:</label>
+                        <input type="text" class="input required email" name="email" />
+                      </div>
+                      
+                      <div>
+                        <label>Phone:</label>
+                        <input type="text" class="input required number" name="phone" />
+                      </div>
+                    </div>
+                    
+                    
+                    <div class="col-md-6 col-sm-12">
+                      <h2>Address</h2>           
+                      <div>
+                        <label>Zip:</label>
+                        <input type="text" class="input required number" name="zip" />
+                      </div>
+                      
+                      
+                      <div>
+                        <label>Street:</label>
+                        <input type="text" class="input required" name="street" />
+                      </div>
+                      
+                      <div>
+                        <label>City:</label>
+                        <input type="text" class="input required" name="city" />
+                      </div>
+                      
+                      <div>
+                        <label>State:</label>
+                        <input type="text" class="input required" name="state" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+              
+              <div id="right-column" class="col-md-12">
+                <input type="submit" class="submit big" name="submit" value="Continue"  />        
+              </div>
+            </div>            
+            
+          </form>
+        </div>
+        
+        <script type="text/javascript">
+        function validateForm(form){
+          var theForm = $(form);
+          var formID = theForm.attr("id");
+          error=0;
+          $('.required', theForm).each(function() {
+            if(!$(this).hasClass('checkbox')){
+              if($(this).val()==""){
+                if ($(this).parent().find('.error').length == 0)
+                  $(this).parent().append('<div class="error">This field is required</div>');
+                error=1;
+              }
+              else{                                     
+                if($(this).hasClass('number')){               
+                  number=$(this).val();
+                  if(parseInt(number) == number) $(this).parent().find('.error').remove(); 
+                  else {
+                    error=1;
+                    if ($(this).parent().find('.error').length == 0)
+                      $(this).parent().append('<div class="error">This field must be a number</div>');
+                    else $(this).parent().find('.error').html('This field must be a number');
+                  }
+                }             
+                else if($(this).hasClass('email')){               
+                  if(isEmail($(this).val())===true) $(this).parent().find('.error').remove();
+                  else {
+                    error=1;
+                    if ($(this).parent().find('.error').length == 0)
+                      $(this).parent().append('<div class="error">Please enter a valid email address</div>');
+                    else $(this).parent().find('.error').html('Please enter a valid email address');
+                  }
+                } 
+                else $(this).parent().find('.error').remove();
+              }
+            }
+            else{
+              checked=0;         
+              $(this).find("input:checked").each(function() {
+                checked++;
+              });               
+              if(checked==0){
+                error=1;
+                if ($(this).find('.error').length == 0)
+                  $(this).append('<div class="error"><br />Make sure at least one dealer is checked<br /><br /></div>');
+              }
+              else $(this).find('.error').remove();
+            }
+          });
+          
+          $('.phone', theForm).each(function() {
+            if(getValidPhoneNumber($(this).val())==true){
+              $(this).parent().find('.error').remove();
+            } 
+            else {
+              error=1;
+              if ($(this).parent().find('.error').length == 0)
+                $(this).parent().append('<div class="error">Please enter a valid phone number</div>');
+              else $(this).parent().find('.error').html('Please enter a valid phone number');
+            }
+          });
+          
+          
+          $('.social-security', theForm).each(function() {
+            if(validSSN($(this).val())==true){
+              $(this).parent().find('.error').remove();
+            } 
+            else {
+              error=1;
+              if ($(this).parent().find('.error').length == 0)
+                $(this).parent().append('<div class="error">Please enter a valid social security number</div>');
+              else $(this).parent().find('.error').html('Please enter a valid social security number');
+            }
+          });
+          
+          if(error==0) return true;
+          else return false;
+        }
+        
+        function isEmail(email) {
+          var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+          return regex.test(email);
+        }
+        
+        function getValidPhoneNumber(value){
+          value = $.trim(value).replace(/\D/g, '');      
+          if (value.substring(0, 1) == '1') {
+            value = value.substring(1);
+          }         
+          if (value.length == 10) {
+            return true;
+          }       
+          return false;
+        }
+        
+        function validSSN(value) {
+          var regex = /^([0-6]\d{2}|7[0-6]\d|77[0-2])([ \-]?)(\d{2})\2(\d{4})$/;
+          if (!regex.test(value)) {
+              return false;
+          }
+          var temp = value;
+          if (value.indexOf("-") != -1) {
+              temp = (value.split("-")).join("");
+          }
+          if (value.indexOf(" ") != -1) {
+              temp = (value.split(" ")).join("");
+          }
+          if (temp.substring(0, 3) == "000") {
+              return false;
+          }
+          if (temp.substring(3, 5) == "00") {
+              return false;
+          }
+          if (temp.substring(5, 9) == "0000") {
+              return false;
+          }
+          return true;
+        }
+        </script>
+
+      </div>
+    </div>
+  </div>
+  
+  
+
+  
+		<div id="footer">
+			<div class="container">
+        <div class="row">
+  				<div class="col-md-6">
+            <ul class="menu-footer reset">
+    					<li><a href="#">Why Us?</a></li>
+    					<li><a href="">Privacy Policy</a></li>
+    					<li><a href="">Terms of Use</a></li>
+    					<li><a href="">Contact</a></li>         
+    				</ul>
+          </div>
+          
+          <div class="col-md-6">   					
+            <div class="social-icons">
+              <a href="#" class="facebook"></a>
+    					<a href="#" class="twitter"></a>
+              <a href="#" class="google-plus"></a>
+            </div>
+            <div class="copyright">
+              Copyright © 2016 CarLeasingSecrets.com, INC. All Rights Reserved.
+            </div>
+  				</div>
+  			</div>
+      </div>                     
+		</div> 		
+	</body>
+</html>
