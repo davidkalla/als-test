@@ -16,7 +16,7 @@ error_reporting('E_ALL ^ E_NOTICE');
 		<meta name="keywords" content="" />
 		<meta name="description" content="" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-		<title><?php echo $title ?> | Test AutoLoanSaver.com</title>
+		<title><?php echo $title ?> | AutoLoanSaver.com</title>
 		<link rel="stylesheet" type="text/css" href="/components/assets/css/main.min.css" />
     <link rel="stylesheet" type="text/css" href="/components/assets/css/superslides.css" />    
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,500italic,400italic,700,700italic' rel='stylesheet' type='text/css' />
