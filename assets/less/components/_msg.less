@@ -1,0 +1,35 @@
+.msg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1020;
+    border-radius: 0;
+    padding: 22px;
+    border: 0;
+
+    .glyphicon {
+        font-size: 18px;
+        position: relative;
+        top: 4px;
+        padding-right: 15px;
+    }
+    .glyphicon-error {
+        .glyphicon-remove;
+    }
+    .glyphicon-success {
+        .glyphicon-ok;
+    }
+    .glyphicon-info {
+        .glyphicon-warning-sign;
+    }
+}
+.alert-error {
+    .alert-danger;
+
+    background: #a94442;
+    color: #fff;
+}
+.msg.alert.alert-success {
+    background: #6AC772;
+}

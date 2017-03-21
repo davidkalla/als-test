@@ -1,0 +1,79 @@
+.breadcrumb {
+	font-size: 14px;
+	padding-bottom: 5px;
+  color: @prihoda-green;
+  padding: 0;
+  margin-top: 5px;
+  margin-bottom: 0px;
+
+  .active { color: @prihoda-gray; text-decoration:none;}
+  a {color: @prihoda-green; text-decoration: underline;}
+}
+
+
+.ico-watch {
+  background: url(../img/ico-watch-p.png) no-repeat;
+  &:hover {
+    background: url(../img/ico-watch-a.png) no-repeat;
+  }
+}
+
+.ico-compare {
+  background: url(../img/ico-compare-p.png) no-repeat;
+  &:hover {
+    background: url(../img/ico-compare-a.png) no-repeat;
+  }
+}
+
+.ico-favourite {
+  background: url(../img/ico-add-favourite-p.png) no-repeat;
+  &:hover {
+    background: url(../img/ico-add-favourite-a.png) no-repeat;
+  }
+}
+
+
+/* Small devices (tablets, 768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px)  {
+  .breadcrumb { margin-top: 34px; margin-bottom: 20px; }
+
+  .breadcrumb-back {
+    margin-top: 0px;
+    margin-bottom: 30px;
+  }
+
+  .right-icons {
+    margin-top: 11px;
+    span { margin-bottom: 30px; }
+  }
+}
+
+/* Medium devices (desktops, 992px to 1199px) */
+@media (min-width: 992px) and (max-width: 1209px) {
+  .breadcrumb { margin-top: 34px; margin-bottom: 20px; }
+
+  .breadcrumb-back {
+    margin-top: 0px;
+    margin-bottom: 30px;
+  }
+
+  .right-icons {
+    margin-top: 11px;
+    span { margin-bottom: 30px; }
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1210px) {
+  .breadcrumb { margin-top: 24px; margin-bottom: 20px; }
+
+  .breadcrumb-back {
+    margin-top: 0px;
+    margin-bottom: 30px;
+  }
+
+  .right-icons {
+    margin-top: 11px;
+    span { margin-bottom: 30px; }
+  }
+}
