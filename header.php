@@ -1,7 +1,7 @@
-  <?php
-  error_reporting('E_ALL ^ E_NOTICE');
-  global $ISO_common,$pageClass,$title;
-  ?>
+<?php
+error_reporting('E_ALL ^ E_NOTICE');
+global $ISO_common,$pageClass,$title;
+?>
 <?php
 error_reporting('E_ALL ^ E_NOTICE');
 ?>
@@ -55,7 +55,5 @@ if ( $title == "Homepage" ) {
     <div class="container">
       <a href="/" id="logo">
     	<img src="/components/assets/img/logo.png" alt="AutoLoanSaver.com" />
-    	</a>
-      
-      
+    	</a>  
             
