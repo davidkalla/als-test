@@ -55,5 +55,5 @@ if ( $title == "Homepage" ) {
     <div class="container">
       <a href="/" id="logo">
     	<img src="/components/assets/img/logo.png" alt="AutoLoanSaver.com" />
-    	</a>
+    	</a>  
             
