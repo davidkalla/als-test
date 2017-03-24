@@ -1,7 +1,7 @@
-<?php
-error_reporting('E_ALL ^ E_NOTICE');
-global $ISO_common,$pageClass,$title;
-?>
+  <?php
+  error_reporting('E_ALL ^ E_NOTICE');
+  global $ISO_common,$pageClass,$title;
+  ?>
 <?php
 error_reporting('E_ALL ^ E_NOTICE');
 ?>
