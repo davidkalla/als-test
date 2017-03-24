@@ -53,7 +53,7 @@ if ( $title == "Homepage" ) {
 }
 ?>
     <div class="container">
-      <a href="/" id="logo">
+      <a href="/" id="logo" style="display:none;">
     	<img src="/components/assets/img/logo.png" alt="AutoLoanSaver.com" />
     	</a>  
             
